@@ -1,0 +1,110 @@
+/* Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive Layout */
+.container {
+    width: 90%;
+    /* Use percentage width */
+    max-width: 1200px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center align */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .header,
+    .footer {
+        text-align: center;
+        /* Center align */
+    }
+
+    .nav {
+        display: block;
+        /* Vertical navigation */
+    }
+
+    .content {
+        flex-direction: column;
+        /* Vertical content */
+    }
+
+    .hero-container {
+        flex-direction: column;
+        /* Vertical content */
+    }
+
+    .hero-content {
+        order: 1;
+        /* Ensure information is before video */
+    }
+
+    .hero-video {
+        order: 2;
+        /* Ensure video is after information */
+    }
+
+    nav {
+        padding: 0.5rem;
+        /* Reduce padding */
+    }
+
+    .nav-links {
+        font-size: 0.9rem;
+        /* Reduce font size */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        /* Reduce logo font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+        /* Adjust title size */
+    }
+
+    .button {
+        width: 100%;
+        /* Full width button */
+        padding: 1rem;
+        /* Increase padding */
+    }
+}
+
+/* Ensure images and videos are responsive */
+img,
+video {
+    max-width: 100%;
+    /* Maximum width is 100% */
+    height: auto;
+    /* Height auto adjust */
+}
+
+/* Responsive Adjustment for Hero Video */
+.hero-video {
+    flex: 1;
+    /* Make video occupy available space */
+    max-width: 100%;
+    /* Maximum width is 100% */
+    margin: 0 auto;
+    /* Center align */
+}
+
+/* Responsive Adjustment for Video */
+@media (max-width: 768px) {
+    #intro-video {
+        width: 100%;
+        /* Video width is 100% */
+        /* height: auto; */
+        min-height: 100px;
+        min-width: 150px;
+        /* Height auto adjust */
+    }
+}

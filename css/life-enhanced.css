@@ -1,0 +1,224 @@
+/* Overall container style */
+.life {
+    /* Delete or modify background color */
+    /* background-color: #f8f9fa; */
+    padding: 6rem 0;
+}
+
+.life-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header style */
+.life-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.life-header h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    margin: 2rem auto;
+}
+
+/* Category style */
+.life-category {
+    margin-bottom: 8rem;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s ease forwards;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.category-number {
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.category-header h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #fff;
+}
+
+.category-en {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Image grid style */
+.photo-pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Image item style */
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.image-wrapper {
+    position: relative;
+    padding-bottom: 75%;
+    /* 4:3 aspect ratio */
+    background-color: #f0f0f0;
+}
+
+.photo-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect */
+.hover-effect:hover {
+    transform: translateY(-5px);
+}
+
+.hover-effect:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Tag style */
+.photo-tags {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    backdrop-filter: blur(4px);
+}
+
+/* Image information style */
+.photo-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.photo-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .photo-pair {
+        grid-template-columns: 1fr;
+    }
+
+    .life-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .category-number {
+        font-size: 2rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .photo-item {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Load animation */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    animation-play-state: running;
+}
+
+/* Offset animation time */
+.life-category:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.life-category:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.life-category:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.life-category:nth-child(5) {
+    animation-delay: 0.8s;
+}

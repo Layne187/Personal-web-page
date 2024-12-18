@@ -1,0 +1,253 @@
+/* Contact form page specific styles */
+
+/* Contact area container */
+.contact {
+    padding: 25px 0;
+}
+
+/* Contact content container */
+.contact-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Left contact information card */
+.contact-info {
+    flex: 1;
+    max-width: 350px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    text-align: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.info-item h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+/* Right form style adjustment */
+.contact form {
+    flex: 1.5;
+    max-width: none;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contact form title */
+.contact h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Form container */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Form group style */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Input box style */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Textarea special style */
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Add placeholder color */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Submit button style */
+.contact button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Input validation style */
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: rgba(231, 76, 60, 0.8);
+    background: rgba(231, 76, 60, 0.1);
+}
+
+/* Responsive adjustment */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        max-width: 100%;
+    }
+
+    .info-card {
+        margin-bottom: 1rem;
+    }
+
+    .contact {
+        padding: 20px 0;
+    }
+
+    .contact h2 {
+        font-size: 2em;
+    }
+
+    .contact form {
+        margin: 0 20px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        padding: 15px 0;
+    }
+
+    .contact h2 {
+        font-size: 1.6em;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .contact button {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+/* Add animation effect */
+.info-item {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.info-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.info-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.info-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

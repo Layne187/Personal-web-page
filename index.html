@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Metadata Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Stylesheet Inclusion -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/life.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/life-enhanced.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Page Header: Includes Navigation Bar -->
+    <header>
+        <!-- Responsive Navigation Bar -->
+        <nav>
+            <div class="logo">LinfengXie</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#life">Life</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Hero Area -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <!-- Left Personal Information -->
+                <div class="hero-content">
+                    <img src="images/profile/avatar.jpg" alt="个人照片" class="profile-img">
+                    <h1>LinfengXie</h1>
+                    <p>Web Developer in Training</p>
+                </div>
+                <!-- Right Video Player -->
+                <div class="hero-video">
+                    <video id="intro-video" controls poster="videos/video-poster.png">
+                        <source src="videos/1.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Area: Includes Personal Introduction and Skill Display -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>I am a third-year Network Engineering student at Nanchang Hangkong University. I am outgoing and
+                        passionate about life. I love sports, especially basketball. Through sports, I have not only
+                        improved my physical fitness but also developed teamwork and leadership skills. I believe that a
+                        positive attitude towards life and a healthy lifestyle are crucial for personal growth.</p>
+                    <!-- Add Resume Download Button -->
+                    <div class="resume-download">
+                        <a href="resume/LinfengXie_resume.pdf" download class="resume-btn">
+                            <i class="fas fa-download"></i>
+                            Download Resume (PDF)
+                        </a>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <!-- Skill Bars will be generated dynamically through JavaScript -->
+                    <div class="skill-bars"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Display Area -->
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- Projects will be generated dynamically through JavaScript -->
+            </div>
+        </section>
+
+        <!-- Life Display Area -->
+        <section id="life" class="life">
+            <div class="life-container">
+                <div class="life-header">
+                    <h2>Life Moments</h2>
+                    <p class="subtitle">Moments of Life</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="photo-grid">
+                    <!-- Sports Life -->
+                    <div class="life-category fade-in">
+                        <div class="category-header">
+                            <span class="category-number">01</span>
+                            <h3>Sports Life</h3>
+                            <span class="category-en">Sports Life</span>
+                        </div>
+                        <div class="photo-pair">
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/sports1.jpg" alt="Basketball">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Sports</span>
+                                            <span class="tag">Basketball</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Passion on the Court</h4>
+                                            <p>An indispensable part of university life</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/sports2.jpg" alt="Daily">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Sports</span>
+                                            <span class="tag">Training</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Sweat </h4>
+                                            <p>Enduring training moments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Study Life -->
+                    <div class="life-category fade-in">
+                        <div class="category-header">
+                            <span class="category-number">02</span>
+                            <h3>Study Life</h3>
+                            <span class="category-en">Study Life</span>
+                        </div>
+                        <div class="photo-pair">
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/study1.jpg" alt="Library">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Study</span>
+                                            <span class="tag">Read</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Reading </h4>
+                                            <p>Fulfilling moments in the library</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/study2.jpg" alt="Discussion">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Study</span>
+                                            <span class="tag">Discussion</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Thoughtful Collision</h4>
+                                            <p>Exploring knowledge with classmates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Travel Exploration -->
+                    <div class="life-category fade-in">
+                        <div class="category-header">
+                            <span class="category-number">03</span>
+                            <h3>Travel Exploration</h3>
+                            <span class="category-en">Travel Exploration</span>
+                        </div>
+                        <div class="photo-pair">
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/travel1.jpg" alt="City Scenery">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Travel</span>
+                                            <span class="tag">City</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>City Walk</h4>
+                                            <p>Explore every corner of the city</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/travel2.jpg" alt="Natural Scenery">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Travel</span>
+                                            <span class="tag">Nature</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Nature</h4>
+                                            <p>Experience the charm of nature</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music and Art -->
+                    <div class="life-category fade-in">
+                        <div class="category-header">
+                            <span class="category-number">04</span>
+                            <h3>Music and Art</h3>
+                            <span class="category-en">Music and Art</span>
+                        </div>
+                        <div class="photo-pair">
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/music1.jpg" alt="Music">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Music</span>
+                                            <span class="tag">Performance</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Stage</h4>
+                                            <p>Sharing the joy of music</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/music2.jpg" alt="Practice">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Music</span>
+                                            <span class="tag">Practice</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4> Music Time</h4>
+                                            <p>Immersed in the world of music</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Activities -->
+                    <div class="life-category fade-in">
+                        <div class="category-header">
+                            <span class="category-number">05</span>
+                            <h3>Social Activities</h3>
+                            <span class="category-en">Social Activities</span>
+                        </div>
+                        <div class="photo-pair">
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/social1.jpg" alt="Social Activities">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Social</span>
+                                            <span class="tag">Club</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Club Gathering</h4>
+                                            <p>With friends who share the same interests</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-item hover-effect">
+                                <div class="image-wrapper">
+                                    <img data-src="images/life/social2.jpg" alt="Friendship Party">
+                                    <div class="overlay">
+                                        <div class="photo-tags">
+                                            <span class="tag">Social</span>
+                                            <span class="tag">Party</span>
+                                        </div>
+                                        <div class="photo-info">
+                                            <h4>Friendship Time</h4>
+                                            <p>Precious moments with friends</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Area -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <!-- Left Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <h3>Email</h3>
+                            <p>2446310943@qq.com</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <h3>WeChat</h3>
+                            <p>Xie1872085929</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <h3>Address</h3>
+                            <p>Nanchang Hangkong University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Contact Form -->
+                <form id="contact-form">
+                    <!-- Original Form Content -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>
+            <span>&copy; 2024</span>
+            <span class="author">LinfengXie</span>
+            <span>All rights reserved</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript Files Inclusion -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/emoji-cursor.js"></script>
+    <script src="js/page-transition.js"></script>
+</body>
+
+</html>
